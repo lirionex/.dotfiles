@@ -1,0 +1,75 @@
+set number relativenumber
+set idearefactormode=keep
+set ideajoin
+set surround
+set which-key
+set timeoutlen=500
+
+let mapleader = " "
+
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+noremap <Esc> <nop>
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+" movement
+nnoremap <C-j> :m +1<CR>
+nnoremap <C-k> :m -2<CR>
+inoremap <C-j> <Esc>:m +1<CR>gi
+inoremap <C-k> <Esc>:m -2<CR>gi
+
+" system clipboard
+vnoremap y "+y
+vnoremap d "+d
+nnoremap y "+yy
+nnoremap p "+p
+nnoremap P "+P
+vnoremap p "+p
+vnoremap P "+P
+
+" scrolling
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
+" === TAB ACTIONS ===
+" Tab previous
+nmap <leader>th <action>(PreviousTab)
+" Tab next
+nmap <leader>tl <action>(NextTab)
+
+" === ACTIONS ===
+nmap <leader>bd <action>(CloseEditor)
+nmap <leader>i <action>(Generate)
+nmap <leader>s <action>(QuickChangeScheme)
+nmap <leader>/ <action>(ShowErrorDescription)
+nmap <leader>e <action>(GotoNextError)
+nmap <leader><leader> <action>(Switcher)
+nmap <leader>z <action>(ToggleZenMode)
+nmap <leader>m <action>(MavenHelper.QuickRunRootMavenGoal)
+
+" === RUN ACTIONS ===
+" run last config
+nmap <leader>rl :JRun<CR>
+" run here
+nmap <leader>rh <action>(RunClass)
+
+" === SPLITTING ACTIONS ===
+" Split Vertically
+nmap <leader>sv <action>(SplitVertically)
+" Split Horizontally
+nmap <leader>sh <action>(SplitHorizontally)
+" Split Previous
+nmap <leader>sh <action>(PrevSplitter)
+" Split Next
+nmap <leader>sl <action>(NextSplitter)
+" Split Unsplit
+nmap <leader>su <action>(Unsplit)
+
+" CTRL S to save
+inoremap <silent> <C-S> <C-O>:w<CR>
+nnoremap <silent> <C-S> :w<CR>
