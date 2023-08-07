@@ -45,7 +45,7 @@ nmap <leader>tl <action>(NextTab)
 " === ACTIONS ===
 nmap <leader>bd <action>(CloseEditor)
 nmap <leader>i <action>(Generate)
-nmap <leader>s <action>(QuickChangeScheme)
+" nmap <leader>s <action>(QuickChangeScheme)
 nmap <leader>/ <action>(ShowErrorDescription)
 nmap <leader>e <action>(GotoNextError)
 nmap <leader><leader> <action>(Switcher)
@@ -62,11 +62,11 @@ nmap <leader>rh <action>(RunClass)
 " Split Vertically
 nmap <leader>sv <action>(SplitVertically)
 " Split Horizontally
-nmap <leader>sh <action>(SplitHorizontally)
+nmap <leader>sz <action>(SplitHorizontally)
 " Split Previous
-nmap <leader>sh <action>(PrevSplitter)
+nmap <leader>sa <action>(PrevSplitter)
 " Split Next
-nmap <leader>sl <action>(NextSplitter)
+nmap <leader>sd <action>(NextSplitter)
 " Split Unsplit
 nmap <leader>su <action>(Unsplit)
 
